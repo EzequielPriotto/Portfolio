@@ -1,0 +1,101 @@
+:root{
+    --colorVioleta: #a479df;
+    --colorSecundario: #282c34;
+}
+
+header{
+    position: fixed;
+    justify-content: space-between;
+    height: 6rem;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    background-color: var(--colorVioleta);
+}
+
+header *{
+    z-index: 10;
+}
+
+header svg{
+    position: fixed;
+    top: 74px;
+    z-index: 9;
+    transition: 1s ;
+}
+header svg.active{
+    top: 215px;
+}
+
+
+.containerLogo{
+    display: flex;
+}
+.containerLogo img{
+transform:scale(1);
+transition: 1s;    
+}
+.containerLogo.active img{
+    transform: scale(1.2)
+}
+.containerNav{
+    width: 6rem;
+}
+.sticks{
+    height: 100%;
+    width: 6rem;
+    display: flex;
+    position: relative;
+    gap: 5px;
+    z-index: 10;
+}
+.stick{
+    content: "";
+    height: 6px;
+    width: 37px;
+    background-color: var(--colorSecundario);
+    transition: .3s;
+    position: absolute;
+    top: 45px;
+    left: 35px;
+}
+
+.stick.top{
+    top: 35px;
+    left: 35px;
+}
+
+.stick.bottom{
+    top: 55px;
+    left: 35px;
+}
+
+.sticks.active .stick.top,.sticks.active .stick.mid{
+    transform: rotate(45deg);
+    top: 45px;
+    left: 35px;
+    
+}
+
+.sticks.active .stick.bottom{
+    transform: rotate(-45deg);
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+    height: 8rem;
+    background-color: var(--colorVioleta);
+    top: -30px;
+    left: -24px;
+    display: flex;
+    z-index: -1;
+    transition: 1s;
+    flex-direction: column;
+    padding-right: 21rem;
+    align-items: flex-end;
+}
+nav.active{
+    z-index: 9;
+    top: 96px;
+}

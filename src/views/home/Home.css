@@ -1,0 +1,27 @@
+:root {
+    --colorVioleta: #a479df;
+    --colorSecundario: #282c34;
+}
+
+.App-content {
+    background-color: var(--colorSecundario);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding-top: 2.5rem;
+    width: 100vw;
+    flex-direction: column;
+}
+h1{
+    font-size: 32px;
+    height: 3rem;
+}
+h1 span {
+    color: var(--colorVioleta);
+}
+
+.App-content section img{
+width: 100vw;
+}
